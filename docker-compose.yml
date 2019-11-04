@@ -1,0 +1,23 @@
+version: '3.6'
+
+services:
+    aspnetapp:
+        image: aspnetapp
+        build:
+            context: .
+            dockerfile: Dockerfile
+        depends_on:
+            - mssql-express
+        ports:
+            - 80:80
+    mssql-express:
+        image: microsoft/mssql-server-windows-express
+        environment:
+            sa_password: L$clF^i2pue@8y
+            accept_eula: Y
+        ports:
+          - 1533:1433 # Use port 1533 to connect from the host machine using SSMS
+        #volumes:
+        #    - 'D:/DATA:C:/DATA'
+    redis:
+        image: "redis:nanoserver"
