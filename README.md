@@ -47,9 +47,9 @@ Application started. Press Ctrl+C to shut down.
 
 [Docker Hub](https://hub.docker.com/) 是Docker的官方存储库，它支持公共和私有存储库。大多数基本镜像都是从那里获取的，并由维护该镜像的公司（例如Microsoft，Node等）发布。
 
-
 # 在云端运行容器
 
+公有云上都有托管的kubernetes集群，非常方便的运行容器集群。
 
 # Docker Compose 和 容器编排
 
